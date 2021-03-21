@@ -193,17 +193,7 @@
 		MNG.updatePhoneSize(CONFIG.models[0]);
 		MNG.hangEventListeners();
 		MNG.clickable = true;
-		
-		// exposed API
-		window.webPreviewer = {};
-		window.webPreviewer.setPreviewerURL = function (url) {
-				MNG.cached.url.value = url;
-			};
-		window.webPreviewer.refreshPreviewer = function () {
-				MNG.onUpdateIconClick();
-			};
-
-              window.dispatchEvent(new Event("previewer-loaded"));
+		MNG.loadHashUrl();
 	};
 
 	MNG.toggleSettingsBar = function () {
@@ -215,6 +205,14 @@
 
 	MNG.onWindowResize = function () {
 		MNG.updatePhoneSize();
+	};
+	
+	MNG.loadHashUrl = function () {
+		const {hash, protocol} = window.location;
+		if(hash && hash.includes('#gamessandbox.github.io')) {
+		   MNG.cached.url.value = `${protocol}//${hash.replace('#', '')}`;
+		   MNG.onUpdateIconClick(); 
+		}
 	};
 	
 	window.addEventListener("load", MNG.onWindowLoad);
