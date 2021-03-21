@@ -147,10 +147,6 @@
 		if (!MNG.clickable) { return; };
 
 		let { url, phoneIframe: iframe } = MNG.cached;
-		// this approach should be refactored
-		// when redirecting to the previewer a url should be set to a local storage,
-		let gameUrl = window.localStorage.getItem('_gameUrl');
-		url.value = gameUrl ? gameUrl : url.value;
 
 		iframe.src = url.value + "?" + Math.random().toFixed(5);
 		MNG.updatePhoneSize();
@@ -197,7 +193,18 @@
 		MNG.updatePhoneSize(CONFIG.models[0]);
 		MNG.hangEventListeners();
 		MNG.clickable = true;
-		MNG.onUpdateIconClick();
+		
+		// exposed API
+		const moduleEvent = new Event("previewer-loaded", {target: {
+                        setPreviewerURL: function (url) {
+				MNG.cached.url.value = url;
+			},
+			refreshPreviewer : function () {
+				MNG.onUpdateIconClick();
+			}			   
+                }});
+
+              window.dispatchEvent(moduleEvent);
 	};
 
 	MNG.toggleSettingsBar = function () {
@@ -210,7 +217,7 @@
 	MNG.onWindowResize = function () {
 		MNG.updatePhoneSize();
 	};
-
+	
 	window.addEventListener("load", MNG.onWindowLoad);
 	window.addEventListener("resize", MNG.onWindowResize);
 })();
