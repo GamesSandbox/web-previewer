@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Web previewer</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Tool which allows you to look at your website on different screen ratios">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+  <!--[if lt IE 9]> <link rel="stylesheet" href="./css/forIE.css"> <![endif]-->
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- HEADER START -->
+    <header>
+      <i class="fas fa-redo-alt" id="updateIcon"></i>
+      <input type="url" name="url" id="url" value="http://">
+      <i class="fas fa-bars" id="menu"></i>
+    </header>
+    <!-- HEADER END -->
+    <!-- PREVIEWER START -->
+    <div class="phone-wrapper">
+      <div class="phone">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+    <!-- PREVIEWER END-->
+    <!-- MAIN START -->
+    <div class="shader hidden"></div>
+    <main class="disabled">
+      <div class="settings">
+        <i class="fas fa-window-close" id="closeMenu"></i>
+        <div class="devices">
+          <nav>
+            <ul>
+              <li><a href="#" id="Galaxy-S5">Galaxy S5</a><i class="fas fa-mobile-alt"></i></li>
+              <li><a href="#" id="Pixel-2">Pixel 2</a><i class="fas fa-mobile-alt"></i></li>
+              <li><a href="#" id="Pixel-2XL">Pixel 2XL</a><i class="fas fa-mobile-alt"></i></li>
+              <hr>
+              <li><a href="#" id="iPhone-5/SE">iPhone 5/SE</a><i class="fas fa-mobile"></i></li>
+              <li><a href="#" id="iPhone-6/7/8">iPhone 6/7/8</a><i class="fas fa-mobile"></i></li>
+              <li><a href="#" id="iPhone-6/7/8-Plus">iPhone 6/7/8 Plus</a><i class="fas fa-mobile"></i></li>
+              <li><a href="#" id="iPhone-X">iPhone X</a><i class="fas fa-mobile"></i></li>
+              <hr>
+              <li><a href="#" id="iPad">iPad</a><i class="fas fa-tablet-alt"></i></li>
+              <li><a href="#" id="iPad-Pro">iPad Pro</a><i class="fas fa-tablet-alt"></i></li>
+              <hr>
+              <li><a href="#" id="Laptop-HD">Laptop HD</a><i class="fas fa-laptop"></i></li>
+              <li><a href="#" id="Laptop-HD+">Laptop HD+</a><i class="fas fa-laptop"></i></li>
+              <li><a href="#" id="Desctop-Full-HD">Desctop Full HD</a><i class="fas fa-desktop"></i></li>
+              <hr>
+            </ul>
+          </nav>
+        </div>
+        <div class="dimentions">
+          <div>
+            <label for="width">Width</label>
+            <input type="number" name="width" value="480" id="width" disabled>
+          </div>
+          <div>
+            <label for="height">Height</label>
+            <input type="number" name="height" value="640" id="height" disabled>
+          </div>
+        </div>
+        <input type="button" id="button" value="Rotate">
+      </div>
+    </main>
+    <!-- MAIN END -->
+  </div>
+  <div class="forIE">
+    <h3>It seems that you use an old IE</h3>
+    <p>Please use some new one</p>
+  </div>
+</body>
+
+</html>

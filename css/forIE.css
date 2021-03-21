@@ -1,0 +1,17 @@
+.wrapper {
+	display: none;
+}
+.forIE {
+	display: block;
+	color: #000;
+	min-width: 70%;
+	margin: 40px 0;
+	border-radius: 50px;
+	text-align: center;
+}
+.forIE > h3 {
+	font-size: 50px;
+}
+.forIE > p {
+	font-size: 30px;
+}

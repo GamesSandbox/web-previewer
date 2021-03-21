@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 10px;
+}
+
+nav {
+	
+}
+nav i {
+	font-size: 2rem;
+	color: #e6ecf7;
+	-webkit-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+ul {
+	text-align: center;
+	list-style: none;
+}
+
+ul>li {
+	padding: 0.5rem 2rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+
+ul>li>a {
+	font-size: 2rem;
+	color: #e6ecf7;
+	text-decoration: none;
+	-webkit-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+ul>li:hover {
+	background-color: #7eacf7;
+	cursor: pointer;
+}
+
+ul>li:hover > i {
+	color: #fff;
+}
+
+ul>li:hover > a {
+	color: #fff;
+}
+
+.wrapper {
+	height: 100vh;
+	min-width: 1280px;
+	overflow: hidden;
+	position: relative;
+	
+}
+
+/*----------HEADER------------*/
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	height: 5rem;
+	padding: 0.5rem 1rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background-color: #4b8cf4;
+	-webkit-box-shadow: 0 10px 40px 0 #000000;
+	box-shadow: 0 10px 40px 0 #000000;
+}
+
+header > i {
+	font-size: 2.5rem;
+	padding: 0.5rem 1rem;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	text-align: right;
+	color: #e6ecf7;
+	-webkit-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	transition: color 0.3s;
+}
+#updateIcon:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+#menu {
+	text-align: center;
+}
+#menu:hover {
+	color: #fff;
+	cursor: pointer;
+}
+input[type="url"] {
+	font-size: 2rem;
+	-webkit-box-flex: 10;
+	-ms-flex-positive: 10;
+	flex-grow: 10;
+}
+/*----------PREVIEWER------------*/
+.phone-wrapper {
+	position: absolute;
+	z-index: 10;
+	top: 55%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+
+}
+.phone {
+	border: 1rem solid #041228;
+	border-top: 4rem solid #041228;
+	border-left: 1rem solid #041228;
+	border-right: 1rem solid #041228;
+	border-bottom: 4rem solid #041228;
+	border-radius: 3rem;
+	-webkit-box-shadow: 5px 10px 40px 2px #000000;
+	box-shadow: 5px 10px 40px 2px #000000;
+}
+
+.phone.lanscape {
+	border: 1rem solid #041228;
+	border-top: 1rem solid #041228;
+	border-left: 4rem solid #041228;
+	border-right: 4rem solid #041228;
+	border-bottom: 1rem solid #041228;
+	border-radius: 3rem;
+}
+
+
+/*----------SHADER------------*/
+.shader{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 30;
+	background-color: rgba(50, 50, 50, 0.5);
+	-webkit-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+
+.shader.hidden{
+	z-index: 0;
+	background-color: rgba(50, 50, 50, 0);
+}
+
+/*----------MAIN------------*/
+main {
+	position: absolute;
+	z-index: 40;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #4b8cf4;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	-webkit-box-shadow: -5px 0 40px 5px #000000;
+	box-shadow: -5px 0 40px 5px #000000;
+}
+
+main.disabled{
+	right: -30rem;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#closeMenu {
+	color: #e6ecf7;
+	font-size: 2.5rem;
+	padding: 0.5rem 2rem;
+	-webkit-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	transition: color 0.3s;
+}
+#closeMenu:hover {
+	color: #fff;
+}
+.dimentions {
+	width: 25rem;
+}
+.dimentions > div{
+	text-align: right;
+	padding: 0.5rem;
+}
+#width,
+#height {
+	width: 35%;
+}
+label {
+	font-size: 2rem;
+	padding: 0.5rem;
+	color: #fff;
+}
+input[type="number"],
+input[type="button"] {
+	
+	font-size: 1.5rem;
+	padding: 0.5rem;
+}
+input[type="button"]{
+	display: block;
+	width: 15rem;
+	margin: 0 auto;
+}
+
+/*----------FOOTER------------*/
+
+.forIE {
+	display: none;
+}
