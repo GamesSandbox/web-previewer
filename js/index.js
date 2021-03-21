@@ -195,16 +195,15 @@
 		MNG.clickable = true;
 		
 		// exposed API
-		const moduleEvent = new Event("previewer-loaded", {target: {
-                        setPreviewerURL: function (url) {
+		window.webPreviewer = {};
+		window.webPreviewer.setPreviewerURL = function (url) {
 				MNG.cached.url.value = url;
-			},
-			refreshPreviewer : function () {
+			};
+		window.webPreviewer.refreshPreviewer = function () {
 				MNG.onUpdateIconClick();
-			}			   
-                }});
+			};
 
-              window.dispatchEvent(moduleEvent);
+              window.dispatchEvent(new Event("previewer-loaded"));
 	};
 
 	MNG.toggleSettingsBar = function () {
